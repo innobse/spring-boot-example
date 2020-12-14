@@ -1,0 +1,39 @@
+server:
+  port: 80
+
+myapp:
+  config:
+    prop: 1
+    filters:
+      filter-num: 1
+      name-filters:
+        - "guest"
+        - "nonguest"
+
+endpoints:
+  enabled: true
+
+spring:
+  config:
+    use-legacy-processing: true
+  datasource:
+    url: "jdbc:postgresql:/127.0.0.1/database"
+    username: "admin"
+    password: "admin"
+  application:
+    name: "Spring Boot Example"
+  mvc:
+    view:
+      prefix: "/WEB-INF/pages/"
+      suffix: ".jsp"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    org.springframework: debug
+    ru.innopolis.stc: debug

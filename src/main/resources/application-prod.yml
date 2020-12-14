@@ -1,0 +1,23 @@
+server:
+  port: 80
+
+spring:
+#  чтобы работал include профилей так, как работало до SB 2.4 (режим совместимости)
+#  иначе используйте профиль-группы
+  config:
+    use-legacy-processing: true
+  profiles:
+    include:
+      - md5
+  application:
+    name: "Spring Boot Example"
+  datasource:
+    url: "jdbc:postgresql:/stc.ru/database"
+    username: "postgres"
+    password: "postgres"
+
+logging:
+  level:
+    org.springframework: error
+    ru.innopolis.stc: info
+
