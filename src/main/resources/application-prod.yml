@@ -12,7 +12,7 @@ spring:
   application:
     name: "Spring Boot Example"
   datasource:
-    url: "jdbc:postgresql:/stc.ru/database"
+    url: "jdbc:postgresql://stc.ru/database"
     username: "postgres"
     password: "postgres"
 
