@@ -10,7 +10,6 @@ myapp:
       filter-num: 1
       name-filters:
         - "guest"
-        - "nonguest"
 
 endpoints:
   enabled: true

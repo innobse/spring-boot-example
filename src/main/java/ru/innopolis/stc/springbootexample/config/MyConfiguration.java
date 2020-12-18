@@ -38,7 +38,8 @@ public class MyConfiguration {
   }
 
   @Bean
-  public UserDao userRepository(PasswordEncoder encoder) {
+  @Profile("in-memory")
+  public UserDao inMemoryUserDao(PasswordEncoder encoder) {
     return new InMemoryUserDao(encoder);
   }
 

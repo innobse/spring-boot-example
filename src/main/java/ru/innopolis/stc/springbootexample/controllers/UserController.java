@@ -37,7 +37,7 @@ public class UserController {
   }
 
   @GetMapping
-  public Collection<UserDto> getUser() {
+  public Collection<UserDto> getUsers() {
     final Collection<User> allUsers = userService.getAllUsers();
     return allUsers.stream()
         .map(user -> new UserDto(user.getLogin(), user.getRoles()))
